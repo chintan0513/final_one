@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon backend/index.js"
+    "start": "nodemon backend/index.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "author": "Medical ChatBot",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.1.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "mongoose": "^6.3.1",
     "nodemon": "^2.0.15"
   }
 }
